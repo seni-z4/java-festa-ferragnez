@@ -26,7 +26,7 @@ public class CheckGuest {
 
     for (int i = 0; i < lista.length; i++) {
 
-      if (lista[i].equals(nomeDelInvitato)) {
+      if (lista[i].equalsIgnoreCase(nomeDelInvitato)) {
         guard = true;
         break;
       } else {
@@ -35,9 +35,9 @@ public class CheckGuest {
     }
 
     if (guard == true) {
-      System.out.println("sei stati invitato");
+      System.out.println(nomeDelInvitato + " sei stati invitato ");
     } else {
-      System.out.println("non sei stato invitato");
+      System.out.println("mi dispiace " + nomeDelInvitato + " non sei stato invitato");
     }
 
     // for loop
@@ -62,5 +62,7 @@ public class CheckGuest {
     // while (nomeDelInvitato.equals(lista)) {
     // System.out.println("sei stato invitato");
     // }
+
+    input.close();
   }
 }
